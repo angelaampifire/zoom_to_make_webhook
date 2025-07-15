@@ -4,7 +4,7 @@ require('dotenv').config();
 const axios = require('axios');
 
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 const VERIFICATION_TOKEN = process.env.VERIFICATION_TOKEN;
