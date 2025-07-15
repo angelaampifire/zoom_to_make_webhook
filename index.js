@@ -12,6 +12,7 @@ const MAKE_WEBHOOK = process.env.MAKE_WEBHOOK;
 
 app.post('/zoom-webhook', async (req, res) => {
   const payload = req.body;
+  console.log('Incoming payload:', JSON.stringify(payload));
 
   if (payload && payload.plainToken) {
     // Verification challenge
